@@ -113,20 +113,20 @@ You can also play with `maxBoundsViscosity` option ranging from `0` (the user ca
 This is what our final configuration may look like:
 
 ```
-			var map = L.map('map', {
-				zoom: 5,
-				center: [61, -94],
-				maxBounds: [[3.16, -180], [86, 46.03]],
-				maxBoundsViscosity: 0.8
-			});
+var map = L.map('map', {
+	zoom: 5,
+	center: [61, -94],
+	maxBounds: [[3.16, -180], [86, 46.03]],
+	maxBoundsViscosity: 0.8
+});
 
-			L.tileLayer('tiles/{z}/{y}/{x}.png', {
-				minZoom: 2,
-				maxZoom: 7,
-				bounds: [[3.16, -180], [86, 46.03]],
-				noWrap: true,
-				attribution: '<a href="http://www.unece.org/trans/main/sc3/sc3.html">UNECE - Inland Water Transport</a>'
-			}).addTo(map);
+L.tileLayer('tiles/{z}/{y}/{x}.png', {
+	minZoom: 2,
+	maxZoom: 7,
+	bounds: [[3.16, -180], [86, 46.03]],
+	noWrap: true,
+	attribution: '<a href="http://www.unece.org/trans/main/sc3/sc3.html">UNECE - Inland Water Transport</a>'
+}).addTo(map);
 ```
 
 # Hosting
