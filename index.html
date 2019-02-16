@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="assets/css/leaflet/v1.4.0/leaflet.css" />
+
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+			html, body, #map {
+				height: 100%;
+				width: 100%;
+			}
+			h1 {
+				font-size: 36px;
+				font-weight: 300;
+				line-height: 1.1;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+
+		<script src="assets/js/leaflet/v1.4.0/leaflet.js"></script>
+
+		<script>
+			var map = L.map('map', {
+				zoom: 5,
+				center: [61, -94],
+				maxBounds: [[3.16, -180], [86, 46.03]],
+				maxBoundsViscosity: 0.8
+			});
+
+			L.tileLayer('tiles/{z}/{y}/{x}.png', {
+				minZoom: 2,
+				maxZoom: 7,
+				bounds: [[3.16, -180], [86, 46.03]],
+				noWrap: true,
+				attribution: '<a href="http://www.unece.org/trans/main/sc3/sc3.html">UNECE - Inland Water Transport</a>'
+			}).addTo(map);
+		</script>
+	</body>
+</html>
